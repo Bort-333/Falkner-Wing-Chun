@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header, nav, main, footer {
+            margin-bottom: 24px;
+        }
+
+        nav a {
+            margin-right: 15px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            padding: 16px;
+            border-radius: 6px;
+            background: #f9f9f9;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        #log {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+
+
+    <hr>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>This is a minimal HTML/CSS template for testing scripts, layouts, or element behavior.</p>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Item 1</h3>
+                    <p>Sample description or test content.</p>
+                </div>
+                <div class="card">
+                    <h3>Item 2</h3>
+                    <p>Sample description or test content.</p>
+                </div>
+                <div class="card">
+                    <h3>Item 3</h3>
+                    <p>Sample description or test content.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="test">
+            <h2>Interactive Test</h2>
+            <button id="testBtn">Click Me</button>
+            <div id="log">Clicks: 0</div>
+        </section>
+    </main>
+
+    <hr>
+
+
+    <script>
+        let count = 0;
+        const btn = document.getElementById('testBtn');
+        const log = document.getElementById('log');
+
+        btn.addEventListener('click', () => {
+            count++;
+            log.textContent = `Clicks: ${count}`;
+        });
+    </script>
+
+</body>
+</html>
