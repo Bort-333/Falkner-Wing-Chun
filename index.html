@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Media Page</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Stephen Falkner | Applied Wing Chun Private Lessons & Seminars</title>
+    <meta name="description" content="Official site of Stephen Falkner, disciple of SiFu Duncan Leung. Offering Applied Wing Chun private lessons and weekend seminars. Contact for details.">
+    <meta name="keywords" content="Falkner, Stephen, Wing Chun, Applied Wing Chun, SiFu Duncan Leung, martial arts lessons">
+
+    <!-- Schema.org Structured Data for Google Crawlers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stephen Falkner",
+      "jobTitle": "Wing Chun Instructor",
+      "description": "Applied Wing Chun practitioner and instructor offering private lessons and weekend seminars.",
+      "knowsAbout": ["Wing Chun", "Applied Wing Chun", "Martial Arts"],
+      "telephone": "+1-915-945-0361",
+      "email": "sfalkner333@gmail.com"
+    }
+    </script>
+
     <style>
         /* base */
         body {
-            background-color: #333333;
+            background-color: #161C27;
             color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,99 +38,201 @@
 
         /* header */
         header {
-            background-color: #d32f2f;
+            background-color: #400C0C;
             color: #ffffff;
-            padding: 20px;
+            padding: 20px 40px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 24px; /* Space between logo and text */
         }
 
-        /* header image pos */
         .header-logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
+            width: 130px; /* Increased logo size */
+            height: auto;
+            flex-shrink: 0; /* Prevents logo from shrinking on small screens */
         }
 
-        /* body */
+        .seo-title {
+            font-size: 1.5em; /* Adjusted scale to fit nicely in top bar */
+            font-family: Arial, sans-serif;
+            font-weight: normal;
+            margin: 0;
+            color: #ffffff;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        /* body layout */
         main {
             flex: 1;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
-        /* media card */
+        /* top intro section */
+        .intro-section {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 40px;
+        }
+
+        .intro-section figure {
+            margin: 0;
+            width: 320px;
+            flex-shrink: 0;
+        }
+
+        /* Intro Section Styling */
+        .intro-text h2 {
+            font-family: Arial, sans-serif;
+            font-size: 1.8rem;
+            font-weight: normal;
+            line-height: 1.35;
+            color: #ffffff;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        .intro-text {
+            font-family: Arial, sans-serif;
+            font-size: 1.25rem;
+            line-height: 1.4;
+            color: #ffffff;
+        }
+
+        .intro-text small {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        /* 2-column grid for remaining media */
+        .media-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 40px;
+        }
+
+        /* media card styling */
         figure {
-            background-color: #ffffff;
-            margin: 20px 0;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: transparent;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
         }
 
         figure img, figure video {
-            max-width: 100%;
+            width: 100%;
             height: auto;
             display: block;
-            border-radius: 4px;
+            border-radius: 0;
         }
 
         figcaption {
+            font-family: "Times New Roman", serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            color: #e2e8f0;
             margin-top: 10px;
-            font-size: 0.9em;
-            color: #555555;
-            text-align: center;
+            text-align: left;
         }
 
         /* footer */
         footer {
-            background-color: #d32f2f;
+            background-color: #400C0C;
             color: #ffffff;
-            text-align: center;
-            padding: 15px;
+            text-align: left;
+            padding: 20px 40px;
+            font-size: 0.85em;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
 
-    <!-- header + pic1 -->
+    <!-- header -->
     <header>
-        <div>
-            <h1 style="margin: 0;">My Media Page</h1>
-            <p style="margin: 5px 0 0 0;">A simple layout example</p>
-        </div>
-        <img class="header-logo" src="media/pic1.png" alt="Header PNG Logo">
+        <img class="header-logo" src="media/pic1.png" alt="Applied Wing Chun Logo">
+        <h1 class="seo-title">Stephen Falkner — Applied Wing Chun Training & Seminars</h1>
     </header>
 
     <!-- Main Content Area -->
     <main>
-        <p>This is standard body text explaining the media content showcased below.</p>
-
-        <!-- pic2 -->
-        <figure>
-            <img src="media/pic2.png" alt="Sample JPEG Image">
-            <figcaption><strong>Figure 1:</strong> A standard JPEG image sample showcasing a landscape view.</figcaption>
-        </figure>
-
-        <p>Below is a short video file embedded directly into the page with full controls enabled.</p>
-
-        <!-- vid1 -->
-        <figure>
-            <video controls>
-                <source src="media/vid1.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <figcaption><strong>Video 1:</strong> An MP4 video file demo with native player controls.</figcaption>
-        </figure>
-
         
+        <!-- Top Featured Section (Image + Text Side-by-Side) -->
+        <div class="intro-section">
+            <figure>
+                <img src="media/pic2.png" alt="SiFu Duncan Leung and disciple Stephen Falkner Applied Wing Chun">
+                <figcaption>
+                    Zhuhai, China, 2024. SiFu Duncan Leung and disciple Stephen Falkner. Steve started training Wing Chun with his SiFu in 1983.
+                </figcaption>
+            </figure>
+            <div class="intro-text">
+                <h2>Steve is offering private lessons and weekend seminars.</h2>
+                <p><strong>Call, text, or email for details.</strong><br>
+                <small>(see bottom of page for Contact information)</small></p>
+            </div>
+        </div>
+
+        <!-- 2-Column Gallery Grid -->
+        <div class="media-grid">
+            <!-- Item 1 (Video) -->
+            <figure>
+                <video controls>
+                    <source src="media/vid1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption>Switzerland, 2025. Seminar.</figcaption>
+            </figure>
+
+            <!-- Item 2 -->
+            <figure>
+                <img src="media/pic3.png" alt="Applied Wing Chun Switzerland Seminar">
+                <figcaption>Switzerland, 2025. Seminar.</figcaption>
+            </figure>
+
+            <!-- Item 3 -->
+            <figure>
+                <img src="media/pic4.png" alt="Stephen Falkner China Disciple Ceremony">
+                <figcaption>China, 2024. Disciple ceremony.</figcaption>
+            </figure>
+
+            <!-- Item 4 -->
+            <figure>
+                <img src="media/pic5.png" alt="Wing Chun training in Hong Kong">
+                <figcaption>Hong Kong, 2018.</figcaption>
+            </figure>
+
+            <!-- Item 5 -->
+            <figure>
+                <img src="media/pic6.png" alt="Applied Wing Chun seminar in California USA">
+                <figcaption>USA, California.</figcaption>
+            </figure>
+
+            <!-- Item 6 -->
+            <figure>
+                <img src="media/pic7.png" alt="Wing Chun seminar Switzerland">
+                <figcaption>Switzerland, 2018. Seminar.</figcaption>
+            </figure>
+
+            <!-- Item 7 -->
+            <figure>
+                <img src="media/pic8.png" alt="Virginia Beach Wing Chun school">
+                <figcaption>USA, Virginia Beach school, 1987.</figcaption>
+            </figure>
+        </div>
     </main>
 
     <!-- footer -->
     <footer>
-        <p style="margin: 0;">&copy; 2026 My Webpage. All rights reserved.</p>
+        <div class="intro-text">
+            <p><strong>Contact: Stephen Falkner</strong><br>
+            <small>phone / text : 915.945.0361</small></br>
+            <small>email : sfalkner333@gmail.com</small>
+        </div>
     </footer>
 
 </body>
