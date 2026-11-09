@@ -3,106 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Page</title>
+    <title>Simple Media Page</title>
     <style>
+        /* base */
         body {
-            font-family: system-ui, -apple-system, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
+            background-color: #333333;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* header */
+        header {
+            background-color: #d32f2f;
+            color: #ffffff;
             padding: 20px;
-            line-height: 1.6;
-            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        header, nav, main, footer {
-            margin-bottom: 24px;
+        /* header image pos */
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
         }
 
-        nav a {
-            margin-right: 15px;
-            color: #0066cc;
-            text-decoration: none;
+        /* body */
+        main {
+            flex: 1;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        /* media card */
+        figure {
+            background-color: #ffffff;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
+        figure img, figure video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 4px;
         }
 
-        .card {
-            border: 1px solid #ccc;
-            padding: 16px;
-            border-radius: 6px;
-            background: #f9f9f9;
-        }
-
-        button {
-            padding: 8px 16px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        #log {
+        figcaption {
             margin-top: 10px;
-            font-weight: bold;
-            color: #0066cc;
+            font-size: 0.9em;
+            color: #555555;
+            text-align: center;
+        }
+
+        /* footer */
+        footer {
+            background-color: #d32f2f;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
 
+    <!-- header + pic1 -->
+    <header>
+        <div>
+            <h1 style="margin: 0;">My Media Page</h1>
+            <p style="margin: 5px 0 0 0;">A simple layout example</p>
+        </div>
+        <img class="header-logo" src="pic1" alt="Header PNG Logo">
+    </header>
 
-    <hr>
-
+    <!-- Main Content Area -->
     <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>This is a minimal HTML/CSS template for testing scripts, layouts, or element behavior.</p>
-        </section>
+        <p>This is standard body text explaining the media content showcased below.</p>
 
-        <section id="features">
-            <h2>Features</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Item 1</h3>
-                    <p>Sample description or test content.</p>
-                </div>
-                <div class="card">
-                    <h3>Item 2</h3>
-                    <p>Sample description or test content.</p>
-                </div>
-                <div class="card">
-                    <h3>Item 3</h3>
-                    <p>Sample description or test content.</p>
-                </div>
-            </div>
-        </section>
+        <!-- pic2 -->
+        <figure>
+            <img src="pic2" alt="Sample JPEG Image">
+            <figcaption><strong>Figure 1:</strong> A standard JPEG image sample showcasing a landscape view.</figcaption>
+        </figure>
 
-        <section id="test">
-            <h2>Interactive Test</h2>
-            <button id="testBtn">Click Me</button>
-            <div id="log">Clicks: 0</div>
-        </section>
+        <p>Below is a short video file embedded directly into the page with full controls enabled.</p>
+
+        <!-- vid1 -->
+        <figure>
+            <video controls>
+                <source src="vid1" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <figcaption><strong>Video 1:</strong> An MP4 video file demo with native player controls.</figcaption>
+        </figure>
+
+        
     </main>
 
-    <hr>
-
-
-    <script>
-        let count = 0;
-        const btn = document.getElementById('testBtn');
-        const log = document.getElementById('log');
-
-        btn.addEventListener('click', () => {
-            count++;
-            log.textContent = `Clicks: ${count}`;
-        });
-    </script>
+    <!-- footer -->
+    <footer>
+        <p style="margin: 0;">&copy; 2026 My Webpage. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
