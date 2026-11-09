@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bort-333.github.io/Falkner-Wing-Chun/sitemap.xml
